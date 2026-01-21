@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth</title>
+</head>
+<body>
+
+<h2>Rejestracja</h2>
+<input id="r-username" placeholder="Username">
+<input id="r-email" placeholder="Email">
+<input id="r-display" placeholder="Display name">
+<input id="r-password" type="password" placeholder="Password">
+<button onclick="register()">Zarejestruj</button>
+
+<hr>
+
+<h2>Logowanie</h2>
+<input id="l-username" placeholder="Username">
+<input id="l-password" type="password" placeholder="Password">
+<button onclick="login()">Zaloguj</button>
+
+<p id="result"></p>
+
+<button onclick="logout()">Wyloguj</button>
+
+<script src="auth.js" onload="checkAuth()">
+</script>
+</body>
+</html>
+
