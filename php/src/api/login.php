@@ -5,10 +5,8 @@ require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/session.php';
 require_once __DIR__ . '/../config/validator.php';
 
-$data = json_decode(file_get_contents('php://input'), true);
-
-$username = sanitize($data['username'] ?? '');
-$password = $data['password'] ?? '';
+$username = $_POST['username'] ?? '';
+$password = $_POST['password'] ?? '';
 
 if (!$username || !$password) {
     http_response_code(400);
@@ -17,9 +15,10 @@ if (!$username || !$password) {
 }
 
 $stmt = $pdo->prepare("
-    SELECT id_users, password, display_name, id_roles
+    SELECT id_users, password, display_name, users.id_roles, name
     FROM users
-    WHERE username = :username
+    INNER JOIN roles ON users.id_roles = roles.id_roles
+    WHERE users.username = :username
 ");
 
 $stmt->execute([':username' => $username]);
@@ -36,10 +35,13 @@ session_regenerate_id(true);
 $_SESSION['user'] = [
     'id' => $user['id_users'],
     'display_name' => $user['display_name'],
-    'role_id' => $user['id_roles']
+    'role_id' => $user['id_roles'],
+    'role_name' => $user['name']
 ];
 
-echo json_encode([
-    'success' => true,
-    'user' => $_SESSION['user']
-]);
+// echo json_encode([
+//     'success' => true,
+//     'user' => $_SESSION['user']
+// ]);
+
+    header("Location: ../");
