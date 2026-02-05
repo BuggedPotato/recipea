@@ -1,5 +1,5 @@
 async function register() {
-    const res = await fetch('/api/register.php', {
+    const res = await fetch('/api/register', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -22,8 +22,13 @@ async function register() {
 
 }
 
+
+async function getUserPermissions(){
+    const res = await fetch(/api/)
+}
+
 async function login() {
-    const res = await fetch('/api/login.php', {
+    const res = await fetch('/api/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -44,7 +49,7 @@ async function login() {
 }
 
 async function checkAuth() {
-    const res = await fetch('/api/me.php');
+    const res = await fetch('/api/me');
     const data = await res.json();
 
     if (res.ok) {
@@ -54,7 +59,12 @@ async function checkAuth() {
 }
 
 async function logout() {
-    await fetch('/api/logout.php');
-    document.getElementById('result').innerText = 'Wylogowano';
+    const res = await fetch('/api/logout');
+    console.log(res)
+    if (res.ok) {
+        document.getElementById('result').innerText = 'Wylogowano';
+    }
+    else
+        document.getElementById('result').innerText = 'Nie udało się wylogować';
 }
 

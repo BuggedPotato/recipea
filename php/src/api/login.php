@@ -17,7 +17,7 @@ if (!$username || !$password) {
 }
 
 $stmt = $pdo->prepare("
-    SELECT id_users, password, display_name
+    SELECT id_users, password, display_name, id_roles
     FROM users
     WHERE username = :username
 ");
@@ -35,7 +35,8 @@ session_regenerate_id(true);
 
 $_SESSION['user'] = [
     'id' => $user['id_users'],
-    'display_name' => $user['display_name']
+    'display_name' => $user['display_name'],
+    'role_id' => $user['id_roles']
 ];
 
 echo json_encode([
