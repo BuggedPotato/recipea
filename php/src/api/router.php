@@ -7,10 +7,10 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $endpoints = [
     '/api/login' => ['method' => 'POST', 'path' => '/login.php'],
-'/api/register' => ['method' => 'POST', 'path' => '/register.php'],
-'/api/logout' => ['method' => 'GET', 'path' => '/logout.php'],
-'/api/me' => ['method' => 'GET', 'path' => '/me.php'],
-'/api/perms' => ['method' => 'POST', 'path' => '/perms.php']
+    '/api/register' => ['method' => 'POST', 'path' => '/register.php'],
+    '/api/logout' => ['method' => 'GET', 'path' => '/logout.php'],
+    '/api/me' => ['method' => 'GET', 'path' => '/me.php'],
+    '/api/perms' => ['method' => 'POST', 'path' => '/perms.php']
 ];
 
 if(array_key_exists($uri, $endpoints) && $endpoints[$uri]['method'] == $method){

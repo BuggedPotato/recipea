@@ -1,23 +1,17 @@
 <?php
-require_once __DIR__ . '/../config/auth.php';
+    require_once __DIR__ . '/../config/auth.php';
+    requireAuth();
 
-requireAuth();
+    require_once __DIR__ . '/templates/loader.php';
+    loadTemplate("header");
+    loadTemplate("navbar");
 ?>
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-<!--     <script src="auth.js"></script> -->
-</head>
-<body>
 
 <h2>Home</h2>
 <form method="GET" action="./api/logout">
-    <button type="submit">Wyloguj</button>
+    <button class="btn primary rounded" type="submit">Wyloguj</button>
 </form>
 
-</script>
 </body>
 </html>
 

@@ -15,7 +15,7 @@ if (!$username || !$password) {
 }
 
 $stmt = $pdo->prepare("
-    SELECT id_users, password, display_name, users.id_roles, name
+    SELECT id_users, password, username, display_name, users.id_roles, name
     FROM users
     INNER JOIN roles ON users.id_roles = roles.id_roles
     WHERE users.username = :username
@@ -35,6 +35,7 @@ session_regenerate_id(true);
 $_SESSION['user'] = [
     'id' => $user['id_users'],
     'display_name' => $user['display_name'],
+    'username' => $user['username'],
     'role_id' => $user['id_roles'],
     'role_name' => $user['name']
 ];

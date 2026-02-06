@@ -1,0 +1,72 @@
+:root {
+    --color-text: #f8f7fa;
+    --color-text-light: #e5e7eb;
+    --color-background: #191022;
+    --color-primary: #7f13ec;
+    --color-primary-hover: rgba(127, 19, 236, 0.9);
+
+    --font-text: Epilogue;
+}
+
+*{
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+body{
+    background-color: var(--color-background);
+}
+
+.w-25{
+    width: 25%;
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.flow-col{
+    flex-flow: column;
+}
+
+.flow-row{
+    flex-flow: row;
+}
+
+input{
+    background-color: var(--color-background);
+    margin: 0.5em 0 0.5em;
+    padding: 0.5em;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em 2em;
+    border: none;
+    cursor: pointer;
+    margin: 0.5em 0 0.5em;
+}
+
+.primary{
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    font-weight: bold;
+}
+.primary:hover{
+    background-color: var(--color-primary-hover);
+}
+
+.rounded{
+    border-radius: 0.25em;
+}
