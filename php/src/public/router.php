@@ -8,8 +8,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 $endpoints = [
     '/login' => ['method' => 'GET', 'path' => '/login.php'],
     '/register' => ['method' => 'GET', 'path' => '/register.php'],
-    '/home' => ['method' => 'GET', 'path' => '/home.php'],
-    '/' => ['method' => 'GET', 'path' => '/home.php'],
+    '/home' => ['method' => 'GET', 'path' => '/recipes/list.php'],
+    '/' => ['method' => 'GET', 'path' => '/recipes/list.php'],
 ];
 
 if(array_key_exists($uri, $endpoints) && $endpoints[$uri]['method'] == $method){

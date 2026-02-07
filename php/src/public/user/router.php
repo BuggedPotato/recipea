@@ -6,7 +6,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
 
 $endpoints = [
-    '/user/profile' => ['method' => 'GET', 'path' => '/profile.php']
+    '/user/profile' => ['method' => 'GET', 'path' => '/profile.php'],
 ];
 
 if(array_key_exists($uri, $endpoints) && $endpoints[$uri]['method'] == $method){

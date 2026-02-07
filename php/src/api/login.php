@@ -45,4 +45,4 @@ $_SESSION['user'] = [
 //     'user' => $_SESSION['user']
 // ]);
 
-    header("Location: ../");
+header("Location: ../");

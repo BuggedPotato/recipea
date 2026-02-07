@@ -18,6 +18,7 @@ services:
     container_name: php
     volumes:
       - ./php/src:/var/www/html
+      - ./php/src/config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     depends_on:
       - postgres
     networks:
