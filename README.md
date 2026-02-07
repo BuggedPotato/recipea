@@ -1,26 +1,26 @@
 ## TODO
 - [ ] Dokumentacja w `README.md`
-- [ ] Architektura aplikacji (MVC / Frontend–Backend / inna)
+- [?] Architektura aplikacji (MVC / Frontend–Backend / inna)
 - [ ] Kod napisany obiektowo (część backendowa)
-- [ ] Diagram ERD
+- [x] Diagram ERD
 - [x] Repozytorium Git (historia commitów, struktura)
-- [ ] Realizacja tematu projektu
-- [ ] HTML
-- [ ] PostgreSQL
+- [x] Realizacja tematu projektu
+- [x] HTML
+- [x] PostgreSQL
 - [ ] Złożoność bazy danych
-- [ ] Eksport bazy danych do pliku `.sql`
-- [ ] PHP
-- [ ] JavaScript
-- [ ] Fetch API (AJAX)
-- [ ] Design (estetyka interfejsu)
+- [x] Eksport bazy danych do pliku `.sql`
+- [x] PHP
+- [x] JavaScript
+- [x] Fetch API (AJAX)
+- [x] Design (estetyka interfejsu)
 - [ ] Responsywność
 - [x] Logowanie użytkownika
 - [x] Sesja użytkownika
-- [ ] Uprawnienia użytkowników
+- [x] Uprawnienia użytkowników
 - [ ] Role użytkowników (co najmniej dwie)
 - [x] Wylogowywanie
 - [ ] Widoki, wyzwalacze, funkcje, transakcje
-- [ ] Akcje na referencjach (klucze obce)
+- [x] Akcje na referencjach (klucze obce)
 - [ ] Bezpieczeństwo aplikacji
 - [ ] Brak replikacji kodu (DRY)
 - [ ] Czystość i przejrzystość kodu
